@@ -1,0 +1,178 @@
+# #####################################################################
+# PROJECT 1: HOTEL BOOKING SYSTEM
+# #####################################################################
+
+name = input(" Enter Customer Name: ")
+gender = input(" Enter Gender: ")
+if gender == "Male":
+        print(" Welcome Sir! ")
+elif gender == "Female":
+        print(" Welcome Mam! ")
+else:
+        print(" Welcome! ")
+age = int(input(" Enter Your Age: "))
+number = int(input(" Enter Number of Members: "))
+while True:
+    phone = input(" Enter phone Number: ")
+    if len(phone) == 10:
+        print(" Saved Number!")
+        break
+    else:
+        print(" Invalid! Type Again with 10 digits! ")
+room_type = ""
+while True:
+    choice = input(" Enter Hotel Booking or View booking or Cancellation or Review or Exit: ")
+    
+    if choice == "Hotel Booking":
+        print(" Welcome! ")
+        room_type = input(" Enter Single or Double or Deluxe: ")
+        single = 1500 
+        double = 3000
+        deluxe = 4500
+        if room_type == "Single":
+            print(" It costs 1500 per day.")
+            days = int(input(" Enter Number of Days "))
+            special = input(" Enter special services Yes or No: ")
+            if special == "Yes":
+                print(" Extra cost of 500")
+                extra = 500
+                total = (single * days) + extra
+                print(" Total cost is: ", total)
+            else:
+                total = single * days
+                print(" Your Total is: ", total)
+                print(" Transaction successful! ")
+            if days >= 3:
+                    print(" Discount available! ")
+                    discount = total * 0.20
+                    total = total - discount
+                    print(" Your Discount is: ", discount)
+                    print(" Total cost is: ", total)
+                    print(" Transaction Successful! Thank you for booking! Enjoy your time here! ")
+            else:
+                    print(" No Discount!")
+                    total = total
+                    print(" Total cost is: ", total)
+                    print(" Transaction Successful! Thank you for booking! Enjoy your time here! ")
+                
+
+            
+        elif room_type == "Double":
+            print(" It costs 3000 per day. ")
+            days = int(input(" Enter number of days: "))
+            special = input(" Enter special services Yes or No: ")
+            if special == "Yes":
+                print(" Extra cost 1000 ")
+                extra = 1000
+                total = (double * days) + extra
+                print(" Your total is: ", total)
+            else:
+                total = double * days
+                print(" Your Total is: ", total)
+                print(" Transaction Successful!")
+            if days >= 3:
+                    print(" Discount available! ")
+                    discount = total * 0.20
+                    total = total - discount
+                    print(" Your Discount is: ", discount)
+                    print(" Total cost is: ", total)
+                    print(" Transaction Successful! Thank you for booking! Enjoy your time here! ")
+            else:
+                    print(" No Discount!")
+                    total = total
+                    print(" Total cost is: ", total)
+                    print(" Transaction Successful! Thank you for booking! Enjoy your time here! ")
+            
+        elif room_type == "Deluxe":
+            print(" It costs 4500 per day.")
+            days = int(input(" Enter Number of Days: "))
+            special = input(" Enter special services Yes or No: ")
+            if special == "Yes":
+                print(" Extra cost 1500")
+                extra = 1500
+                total = (deluxe * days) + extra
+                print(" Your Total is: ", total)
+                print(" Transaction Successful!")
+            else:
+                total = deluxe * days
+                print(" Your Total is: ", total)
+                print(" Transaction Successful!")
+            if days >= 3:
+                    print(" Discount available! ")
+                    discount = total * 0.20
+                    total = total - discount
+                    print(" Your Discount is: ", discount)
+                    print(" Total cost is: ", total)
+                    print(" Transaction Successful! Thank you for booking! Enjoy your time here! ")
+            else:
+                    print(" No Discount!")
+                    total = total
+                    print(" Total cost is: ", total)
+                    print(" Transaction Successful! Thank you for booking! Enjoy your time here! ")
+            
+        else:
+            print(" Invalid Room Type!")
+            
+    elif choice == "View booking":
+            if room_type == "":
+                print(" No room booking found! ")
+            else:
+                print(" Name: ", name)
+                print(" Gender: ", gender)
+                print(" Room Type: ", room_type)
+                print(" Number of customers: ", number)
+                print(" Living for upto ", days, "Days")
+                print(" Your phone number: ", phone)
+                print(" Thank you for booking! Enjoy your time with us! ")
+            
+            
+    elif choice == "Cancellation":
+            cancel = input(" Are you sure You want to Cancel your booking: ")
+            if cancel == "Yes":
+                room_type = ""
+                print(" Cancellation successful! Thank you! visit again. ")
+                
+            else:
+                print(" Cancellation failed! ")
+                
+    elif choice == "Exit":
+            print(" Exit Successful! Thank you, visit again. ")
+            break
+            
+    elif choice == "Review":
+            review = (input(" Please Write your Review: "))
+            while True:
+                rate = int(input(" Enter on a scale of 1 to 5: "))
+                
+                if rate < 1 or rate > 5:
+                    print(" Invalid rating")
+                
+                elif rate <= 3:
+                    print(" We will make sure to Improve and give better service. Thank you for your response! ")
+                    break
+                
+                
+                else:
+                    print(" Thank you for your response! We are Glad you Enjoyed Your Time Here! ")
+                    print(" Thank you for booking with us! Visit again.")
+                    break
+                    
+    else:
+            print(" Invalid Choice! ")
+            
+        
+    
+   
+            
+
+            
+        
+            
+            
+            
+            
+        
+            
+            
+
+
