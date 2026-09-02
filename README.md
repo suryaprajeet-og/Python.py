@@ -1,5 +1,3 @@
-# Python.py
-
 # Python Projects by Surya
 
 A collection of menu-driven console applications built in Python.
@@ -18,11 +16,12 @@ A collection of menu-driven console applications built in Python.
 
 Each file is standalone. Run any one with:
 
-
+```bash
 python3 <filename>.py
-
+```
 
 For example:
 
+```bash
 python3 hotel_booking_system.py
-
+```
